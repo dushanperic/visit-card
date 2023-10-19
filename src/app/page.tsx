@@ -10,7 +10,7 @@ export default function Home() {
               className="text-[22px] tracking-wide hover:opacity-40 transition-all duration-150"
               target="_blank"
               href="https://github.com/dushanperic"
-              title="Github"
+              title="Github profile"
             >
               Github
             </a>
@@ -20,7 +20,7 @@ export default function Home() {
               className="text-[22px] tracking-wide hover:opacity-40 transition-all duration-150"
               target="_blank"
               href="https://www.linkedin.com/in/dusan-peric/"
-              title="Linkedin"
+              title="Linkedin profile"
             >
               Linkedin
             </a>
@@ -30,7 +30,7 @@ export default function Home() {
               className="text-[22px] tracking-wide hover:opacity-40 transition-all duration-150"
               target="_blank"
               href="mailto:dushanperic1@gmail.com"
-              title="dushanperic1@gmail.com"
+              title="Send email to dushanperic1@gmail.com"
             >
               E-mail
             </a>
