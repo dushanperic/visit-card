@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   description: "Dusan Peric - Visit Card",
 };
 
+const Main = ({ children }: { children: React.ReactNode }) => (
+  <main className="h-screen w-full flex flex-col items-start justify-between p-8">
+    {children}
+  </main>
+);
 export default function RootLayout({
   children,
 }: {
@@ -19,7 +24,7 @@ export default function RootLayout({
       <body
         className={`w-screen h-screen flex items-start justify-start ${inter.className}`}
       >
-        {children}
+        <Main>{children}</Main>
       </body>
     </html>
   );
