@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const Main = ({ children }: { children: React.ReactNode }) => (
-  <main className="h-screen w-full flex flex-col items-start justify-between p-8">
+  <main className="h-full xl:h-screen w-full flex flex-col items-start justify-between p-8">
     {children}
   </main>
 );
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`w-screen h-screen flex items-start justify-start ${inter.className}`}
+        className={`w-full h-full xl:h-screen flex items-start justify-start bg-[#faf9f7] ${inter.className}`}
       >
         <Main>{children}</Main>
       </body>
