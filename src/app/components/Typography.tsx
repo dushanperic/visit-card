@@ -9,7 +9,7 @@ export const AnchorLink = ({
 }) => {
   return (
     <a
-      className="block w-min-content text-[22px] tracking-wide hover:opacity-40 transition-all duration-150"
+      className="inline-block text-[22px] tracking-wide hover:opacity-40 transition-all duration-150"
       target="_blank"
       title="Dusan Peric Github profile"
       href={href}
