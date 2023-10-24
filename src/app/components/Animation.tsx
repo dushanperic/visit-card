@@ -499,8 +499,20 @@ const FRAME_INTERVAL: number = 100;
 
 export const Animation = () => {
   const [currentAsciiIndex, setCurrentAsciiIndex] = useState<number>(0);
+  const [fontSize, setFontSize] = useState<number>(5);
+
+  const handleKeyDown = (e: KeyboardEvent): void => {
+    if (e.key === "ArrowUp") {
+      setFontSize((val) => val + 1);
+    }
+
+    if (e.key === "ArrowDown") {
+      setFontSize((val) => (val > 1 ? val - 1 : val));
+    }
+  };
 
   useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
     const interval = setInterval(
       () =>
         setCurrentAsciiIndex((current) =>
@@ -509,11 +521,18 @@ export const Animation = () => {
       FRAME_INTERVAL
     );
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
+  useEffect(() => {
+    console.log(fontSize);
+  }, [fontSize]);
+
   return (
-    <pre className="text-[5px] lg:text-[5px] xl:text-[7px]">
+    <pre style={{ fontSize: `${fontSize}px` }}>
       {asciiArray[currentAsciiIndex]}
     </pre>
   );
